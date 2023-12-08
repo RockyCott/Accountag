@@ -1,0 +1,8 @@
+{
+  "name": "Accountag",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "a3e777cb"
+}
