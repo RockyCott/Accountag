@@ -1,0 +1,67 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <div class="center-toolbar-title">
+        <img [src]="logoUrl" alt="Logo" class="logo-image" />{{app_name}}
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <!-- Sign up page -->
+  <div class="container">
+    <h1 class="heading">🚀 Create Account<br /><br /></h1>
+    <p class="para">Sign up to get started!</p>
+    <form [formGroup]="formData">
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>User Name</legend>
+          <ion-input
+            formControlName="name"
+            type="text"
+            placeholder="Rockycott"
+          ></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>Email</legend>
+          <ion-input
+            formControlName="email"
+            type="email"
+            placeholder="example@domain.com"
+          ></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>Password</legend>
+          <ion-input
+            formControlName="password"
+            type="password"
+            placeholder="*******"
+          ></ion-input>
+        </fieldset>
+      </ion-item>
+      <p class="signup-text">
+        I'm already a member&nbsp;<a
+          [routerLink]="['/auth/login']"
+          routerLinkActive="router-link-active"
+          >Sign In?</a
+        >
+      </p>
+      <ion-button class="login-button" (click)="register()" expand="block"
+        >Sign Up</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p class="copyright">
+      With ❤️ by&nbsp;<a (click)="openPage('https://github.com/RockyCott')"
+        >Rockycott</a
+      >
+    </p>
+  </ion-toolbar>
+</ion-footer>
