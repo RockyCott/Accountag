@@ -1,3 +1,3 @@
 export const environmentApp = {
-    APP_NAME: 'Accountag'
+    APP_NAME: 'TrackIt'
   };
